@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int E, S, M;
+	cin >> E >> S >> M;
+	int year = 1;
+	int e, s, m;
+	e = 1; s = 1; m = 1;
+	while (!(e == E && s == S && m == M)) {
+		e++; s++; m++;
+		year++;
+		if (e > 15) e = 1;
+		if (s > 28) s = 1;
+		if (m > 19) m = 1;
+	}
+	cout << year;
+
+}
